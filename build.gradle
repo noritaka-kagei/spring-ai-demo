@@ -19,13 +19,17 @@ repositories {
 }
 
 ext {
-	set('springAiVersion', "1.0.2")
+	set('springAiVersion', "1.0.3")
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-    // implementation 'org.springframework.ai:spring-ai-starter-model-anthropic'
+	implementation 'org.springframework.ai:spring-ai-client-chat'
+	// implementation 'org.springframework.ai:spring-ai-starter-model-anthropic'
     implementation 'org.springframework.ai:spring-ai-starter-model-ollama'
+	implementation 'org.springframework.ai:spring-ai-vector-store'
+	implementation 'org.springframework.ai:spring-ai-rag'
+    implementation 'org.springframework.ai:spring-ai-pdf-document-reader'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
